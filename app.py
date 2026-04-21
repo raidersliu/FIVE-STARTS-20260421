@@ -95,9 +95,9 @@ def draw_star_with_repeated_numbers(result, typen, digit_count, ten_count):
             font_center = ImageFont.truetype(font_path, 40)
             font_data = ImageFont.truetype(font_path, 20)
         else:
-            font = ImageFont.truetype("/System/Library/Fonts/PingFang.ttc", 14)
-            font_center = ImageFont.truetype("/System/Library/Fonts/PingFang.ttc", 40)
-            font_data = ImageFont.truetype("/System/Library/Fonts/PingFang.ttc", 20)
+        font = ImageFont.truetype("./MSJH.ttc", 12)
+        font_center = ImageFont.truetype("./MSJH.ttc", 36)
+        font_data = ImageFont.truetype("./MSJH.ttc", 18)
     except:
         st.warning("⚠️ 找不到中文字體檔，圖片上的中文可能會無法顯示。部署時請記得上傳 custom_font.ttf。")
         font = ImageFont.load_default()
