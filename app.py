@@ -87,17 +87,13 @@ def draw_star_with_repeated_numbers(result, typen, digit_count, ten_count):
     img = Image.new('RGB', (width, height), 'white')
     draw = ImageDraw.Draw(img)
 
-    # 字體設定：優先尋找 custom_font.ttf，若無則嘗試 Mac 預設
-    font_path = "custom_font.ttf"
-    try:
-        if os.path.exists(font_path):
-            font = ImageFont.truetype(font_path, 14)
-            font_center = ImageFont.truetype(font_path, 40)
-            font_data = ImageFont.truetype(font_path, 20)
-        else:
-        font = ImageFont.truetype("./MSJH.ttc", 12)
-        font_center = ImageFont.truetype("./MSJH.ttc", 36)
-        font_data = ImageFont.truetype("./MSJH.ttc", 18)
+
+            font = ImageFont.truetype("./MSJH.ttc", 12)
+            font_center = ImageFont.truetype("./MSJH.ttc", 36)
+            font_data = ImageFont.truetype("./MSJH.ttc", 18)
+
+    
+
     except:
         st.warning("⚠️ 找不到中文字體檔，圖片上的中文可能會無法顯示。部署時請記得上傳 custom_font.ttf。")
         font = ImageFont.load_default()
