@@ -88,17 +88,18 @@ def draw_star_with_repeated_numbers(result, typen, digit_count, ten_count):
     draw = ImageDraw.Draw(img)
 
 
-            font = ImageFont.truetype("./MSJH.ttc", 12)
-            font_center = ImageFont.truetype("./MSJH.ttc", 36)
-            font_data = ImageFont.truetype("./MSJH.ttc", 18)
 
-    
 
+        try:
+        font = ImageFont.truetype("./MSJH.ttc", 12)
+        font_center = ImageFont.truetype("./MSJH.ttc", 36)
+        font_data = ImageFont.truetype("./MSJH.ttc", 18)
     except:
-        st.warning("⚠️ 找不到中文字體檔，圖片上的中文可能會無法顯示。部署時請記得上傳 custom_font.ttf。")
         font = ImageFont.load_default()
         font_center = ImageFont.load_default()
         font_data = ImageFont.load_default()
+        
+
 
     # 在左上角加上文字分析結果
     zz = 0
