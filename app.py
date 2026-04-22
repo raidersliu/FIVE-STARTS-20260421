@@ -189,7 +189,7 @@ def draw_star_with_repeated_numbers(result, typen, digit_count, ten_count):
 st.set_page_config(page_title="身體自覺五星術分析", layout="wide")
 
 st.title("🌟 身體自覺五星術分析系統")
-st.info("系統規則：當類型 (Type) 為 10 時，下一個轉換階段將跳過 1 直接進入 2。")
+#st.info("系統規則：當類型 (Type) 為 10 時，下一個轉換階段將跳過 1 直接進入 2。")
 
 col1, col2 = st.columns([1, 3])
 
