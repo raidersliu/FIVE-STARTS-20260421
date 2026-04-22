@@ -87,20 +87,17 @@ def draw_star_with_repeated_numbers(result, typen, digit_count, ten_count):
     img = Image.new('RGB', (width, height), 'white')
     draw = ImageDraw.Draw(img)
 
-
-
-
-        try:
-        font = ImageFont.truetype("./MSJH.ttc", 12)
-        font_center = ImageFont.truetype("./MSJH.ttc", 36)
-        font_data = ImageFont.truetype("./MSJH.ttc", 18)
+    # 修正縮排錯誤，並指定使用 MSJH.ttc
+    try:
+        font = ImageFont.truetype("MSJH.ttc", 12)
+        font_center = ImageFont.truetype("MSJH.ttc", 36)
+        font_data = ImageFont.truetype("MSJH.ttc", 18)
     except:
+        st.warning("⚠️ 找不到字型檔 MSJH.ttc，將使用預設英文字型（中文可能無法顯示）。請記得將字型檔與 app.py 放在同一個資料夾。")
         font = ImageFont.load_default()
         font_center = ImageFont.load_default()
         font_data = ImageFont.load_default()
         
-
-
     # 在左上角加上文字分析結果
     zz = 0
     for k, v in result.items():
